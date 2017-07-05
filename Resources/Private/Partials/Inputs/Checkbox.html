@@ -1,0 +1,26 @@
+{namespace v=RibaseForms\RibaseForms\ViewHelpers}
+<f:if condition="{field.name}">
+    <f:then>
+        <v:variable.set name="fieldValueRequired" value="{v:variable.get(name: 'wdMailer_{field.id}_{field.name}_Required')}" />
+        <v:variable.set name="fieldRequired" value="{v:variable.get(name: 'wdMailer_{field.id}_{field.name}')}" />
+    </f:then>
+    <f:else>
+        <v:variable.set name="fieldValueRequired" value="{v:variable.get(name: 'wdMailer_{field.id}_Required')}" />
+        <v:variable.set name="fieldRequired" value="{v:variable.get(name: 'wdMailer_{field.id}')}" />
+    </f:else>
+</f:if>
+<f:if condition="{field.required}">
+    <f:then>
+        <div class="wd-forms--fieldset-input checkbox">
+            <f:form.checkbox property="wdMailer_{field.id}_Required" value="{field.label}" id="wdMailer_{field.label}" name="wdMailer_{field.id}"/><label for="wdMailer_{field.label}">{field.label}*</label>
+            <f:if condition="{fieldValueRequired}=='isEmpty'">
+                <label class="error">Das Feld "{field.label}" ist ein Pflichtfeld.</label>
+            </f:if>
+        </div>
+    </f:then>
+    <f:else>
+        <div class="wd-forms--fieldset-input checkbox">
+            <f:form.checkbox property="wdMailer_{field.id}" value="{field.label}" id="wdMailer_{field.label}" name="wdMailer_{field.id}"/><label for="wdMailer_{field.label}">{field.label}</label>
+        </div>
+    </f:else>
+</f:if>

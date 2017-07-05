@@ -1,0 +1,41 @@
+{namespace v=RibaseForms\RibaseForms\ViewHelpers}
+<f:if condition="{field.name}">
+    <f:then>
+        <v:variable.set name="fieldValueRequired" value="{v:variable.get(name: 'wdMailer_{field.id}_{field.name}_Required')}" />
+        <v:variable.set name="fieldRequired" value="{v:variable.get(name: 'wdMailer_{field.id}_{field.name}')}" />
+    </f:then>
+    <f:else>
+        <v:variable.set name="fieldValueRequired" value="{v:variable.get(name: 'wdMailer_{field.id}_Required')}" />
+        <v:variable.set name="fieldRequired" value="{v:variable.get(name: 'wdMailer_{field.id}')}" />
+    </f:else>
+</f:if>
+
+<f:debug>{fieldValueRequired}</f:debug>
+<div class="wd-forms--fieldset-input">
+    <f:if condition="{field.required}">
+        <f:then>
+            <label for="wdMailer_{field.id}">{field.label}*</label>
+            <f:if condition="{fieldValueRequired}=='isEmpty'">
+                <f:then>
+
+                    <f:form.textfield property="wdMailer_{field.id}_{field.name}_Required" id="wdMailer_{field.id}" value="" additionalAttributes="{placeholder: '{field.placeholder}'}"/>
+                    <label class="error">Das Feld "{field.label}" ist ein Pflichtfeld.</label>
+                </f:then>
+                <f:else>
+
+                    <f:form.textfield property="wdMailer_{field.id}_{field.name}_Required" id="wdMailer_{field.id}" value="{fieldValueRequired}" additionalAttributes="{placeholder: '{field.placeholder}'}"/>
+                    <label class="error">Das Feld "{field.label}" ist ein Pflichtfeld.</label>
+                </f:else>
+            </f:if>
+        </f:then>
+        <f:else>
+            <label for="wdMailer_{field.id}">{field.label}</label>
+            <f:then>
+                <f:form.textfield property="wdMailer_{field.id}_{field.name}_Required" id="wdMailer_{field.id}" value="" additionalAttributes="{placeholder: '{field.placeholder}'}"/>
+            </f:then>
+            <f:else>
+                <f:form.textfield property="wdMailer_{field.id}_{field.name}_Required" id="wdMailer_{field.id}" value="{fieldRequired}" additionalAttributes="{placeholder: '{field.placeholder}'}"/>
+            </f:else>
+        </f:else>
+    </f:if>
+</div>

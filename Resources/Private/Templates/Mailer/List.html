@@ -1,0 +1,81 @@
+
+<f:layout name="Default" />
+{namespace v=RibaseForms\RibaseForms\ViewHelpers}
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+
+
+  <f:form method="post" controller="Mailer" action="send" name="content" object="{content}">
+
+      <f:for each="{inputs}" as="field" key="key">
+
+        <v:condition.string.contains haystack="{key}" needle="textfield">
+          <f:if condition="{settings.dev}">
+            <f:render partial="Debug/CommentStart" />
+            <f:render partial="Debug/Fieldinformation" arguments="{_all}" />
+            <f:render partial="Debug/CommentEnd" />
+          </f:if>
+          <f:render partial="Inputs/Textfield" arguments="{_all}" />
+        </v:condition.string.contains>
+
+        <v:condition.string.contains haystack="{key}" needle="textarea">
+          <f:if condition="{settings.dev}">
+            <f:render partial="Debug/CommentStart" />
+            <f:render partial="Debug/Fieldinformation" arguments="{_all}" />
+            <f:render partial="Debug/CommentEnd" />
+          </f:if>
+          <f:render partial="Inputs/Textarea" arguments="{_all}" />
+        </v:condition.string.contains>
+
+        <v:condition.string.contains haystack="{key}" needle="checkbox">
+          <f:if condition="{settings.dev}">
+            <f:render partial="Debug/CommentStart" />
+            <f:render partial="Debug/Fieldinformation" arguments="{_all}" />
+            <f:render partial="Debug/CommentEnd" />
+          </f:if>
+          <f:render partial="Inputs/Checkbox" arguments="{_all}" />
+        </v:condition.string.contains>
+
+        <v:condition.string.contains haystack="{key}" needle="radio">
+          <f:if condition="{settings.dev}">
+            <f:render partial="Debug/CommentStart" />
+            <f:render partial="Debug/Fieldinformation" arguments="{_all}" />
+            <f:render partial="Debug/CommentEnd" />
+          </f:if>
+          <f:render partial="Inputs/Radiobutton" arguments="{_all}" />
+
+        </v:condition.string.contains>
+
+        <v:condition.string.contains haystack="{key}" needle="fieldset">
+          <f:if condition="{settings.dev}">
+            <f:render partial="Debug/CommentStart" />
+            <f:render partial="Debug/Fieldinformation" arguments="{_all}" />
+            <f:render partial="Debug/CommentEnd" />
+          </f:if>
+          <f:render partial="Inputs/Fieldset" arguments="{_all}" />
+        </v:condition.string.contains>
+
+
+      </f:for>
+
+
+    <div class="wd-forms--fieldset-input">
+      <f:form.submit name="mySubmit" value="<f:translate key='wdMailer_Send'/>" />
+    </div>
+
+
+  </f:form>
+</f:section>
+
+{field.name}

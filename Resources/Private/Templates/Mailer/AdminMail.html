@@ -1,0 +1,47 @@
+
+<f:layout name="Default" />
+<f:section name="main">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tbody>
+      <tr>
+        <td style="padding:10px 0 30px 0">
+          <table style="border:1px solid #cccccc;border-collapse:collapse" align="center" border="0" cellpadding="0" cellspacing="0" width="600">
+            <tbody><tr>
+              <td style="padding:40px 30px 40px 30px" bgcolor="#ffffff">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tbody>
+                  <f:for each="{mailContent}" as="wert" key="key">
+
+                    <tr>
+                      <td style="margin-right:10px;"><f:translate key="{key}" /></td>
+                      <td>
+                        <f:if condition="{wert}=='1'">
+                          <f:then>
+                            <f:translate key="wdMailer_Gender_Man" />
+                          </f:then>
+                          <f:else>
+                            <f:if condition="{wert}=='2'">
+                              <f:then>
+                                <f:translate key="wdMailer_Gender_Woman" />
+                              </f:then>
+                              <f:else>
+                                {wert}
+                              </f:else>
+                            </f:if>
+                          </f:else>
+                        </f:if>
+                      </td>
+                    </tr>
+
+                  </f:for>
+                  </tbody></table>
+              </td>
+            </tr>
+            </tbody></table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</f:section>
+
+

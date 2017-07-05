@@ -1,0 +1,113 @@
+<div class="wd-forms--fieldset-input">
+<fieldset>
+    <legend><f:translate key="wdMailer_AppointmentLegend" /></legend>
+    <div class="wd-forms--fieldset-input">
+        <label><f:translate key="wdMailer_Appointment" /></label>
+        <f:form.checkbox property="wdMailer_Appointment" value="<f:translate key='wdMailer_Appointment_one' />" id="wdMailer_Appointment_one" multiple="1" /><label for="wdMailer_Appointment_one"><f:translate key="wdMailer_Appointment_one" /></label>
+        <f:form.checkbox property="wdMailer_Appointment" value="<f:translate key='wdMailer_Appointment_two' />" id="wdMailer_Appointment_two" multiple="1" /><label for="wdMailer_Appointment_two"><f:translate key="wdMailer_Appointment_two" /></label>
+        <f:form.checkbox property="wdMailer_Appointment" value="<f:translate key='wdMailer_Appointment_three' />" id="wdMailer_Appointment_three" multiple="1" /><label for="wdMailer_Appointment_three"><f:translate key="wdMailer_Appointment_three" /></label>
+        <f:form.checkbox property="wdMailer_Appointment" value="<f:translate key='wdMailer_Appointment_four' />" id="wdMailer_Appointment_four" multiple="1" /><label for="wdMailer_Appointment_four"><f:translate key="wdMailer_Appointment_four" /></label>
+    </div>
+    <div class="wd-forms--fieldset-input">
+        <label for="wdMailer_AgreedAppointment"><f:translate key="wdMailer_AgreedAppointment" /></label>
+        <f:form.textarea property="wdMailer_AgreedAppointment" id="wdMailer_AgreedAppointment"/>
+    </div>
+
+    <div class="wd-forms--fieldset-input">
+        <label for="wdMailer_ReferringPhysician"><f:translate key="wdMailer_ReferringPhysician" />*</label>
+        <f:if condition="{wdMailer_ReferringPhysician_Required}=='isEmpty'">
+            <f:then>
+                <f:form.textfield property="wdMailer_ReferringPhysician_Required" id="wdMailer_ReferringPhysician"/>
+                <label class="error">Das Feld "<f:translate key="wdMailer_ReferringPhysician" />" ist ein Pflichtfeld.</label>
+            </f:then>
+            <f:else>
+                <f:form.textfield property="wdMailer_ReferringPhysician_Required" id="wdMailer_ReferringPhysician"/>
+            </f:else>
+        </f:if>
+    </div>
+
+    <div class="wd-forms--fieldset-input">
+        <label><f:translate key="wdMailer_MedicalExamination" /></label>
+        <f:form.checkbox property="wdMailer_MedicalExamination" value="<f:translate key='wdMailer_MedicalExamination_one' />" id="wdMailer_MedicalExamination_one" multiple="1" /><label for="wdMailer_MedicalExamination_one"><f:translate key="wdMailer_MedicalExamination_one" /></label>
+        <f:form.checkbox property="wdMailer_MedicalExamination" value="<f:translate key='wdMailer_MedicalExamination_two' />" id="wdMailer_MedicalExamination_two" multiple="1" /><label for="wdMailer_MedicalExamination_two"><f:translate key="wdMailer_MedicalExamination_two" /></label>
+        <f:form.checkbox property="wdMailer_MedicalExamination" value="<f:translate key='wdMailer_MedicalExamination_three' />" id="wdMailer_MedicalExamination_three" multiple="1" /><label for="wdMailer_MedicalExamination_three"><f:translate key="wdMailer_MedicalExamination_three" /></label>
+        <f:form.checkbox property="wdMailer_MedicalExamination" value="<f:translate key='wdMailer_MedicalExamination_four' />" id="wdMailer_MedicalExamination_four" multiple="1" /><label for="wdMailer_MedicalExamination_four"><f:translate key="wdMailer_MedicalExamination_four" /></label>
+        <f:form.checkbox property="wdMailer_MedicalExamination" value="<f:translate key='wdMailer_MedicalExamination_five' />" id="wdMailer_MedicalExamination_five" multiple="1" /><label for="wdMailer_MedicalExamination_five"><f:translate key="wdMailer_MedicalExamination_five" /></label>
+        <f:form.checkbox property="wdMailer_MedicalExamination" value="<f:translate key='wdMailer_MedicalExamination_six' />" id="wdMailer_MedicalExamination_six" multiple="1" /><label for="wdMailer_MedicalExamination_six"><f:translate key="wdMailer_MedicalExamination_six" /></label>
+    </div>
+
+    <div class="wd-forms--fieldset-input">
+        <label for="wdMailer_BodyRegion"><f:translate key="wdMailer_BodyRegion" />*</label>
+        <f:if condition="{wdMailer_BodyRegion_Required}=='isEmpty'">
+            <f:then>
+                <f:form.textarea property="wdMailer_BodyRegion_Required" id="wdMailer_BodyRegion"/>
+                <label class="error">Das Feld "<f:translate key="wdMailer_BodyRegion" />" ist ein Pflichtfeld.</label>
+            </f:then>
+            <f:else>
+                <f:form.textarea property="wdMailer_BodyRegion_Required" id="wdMailer_BodyRegion"/>
+            </f:else>
+        </f:if>
+    </div>
+
+    <div class="wd-forms--fieldset-input">
+        <label for="wdMailer_ClinicalParticulars"><f:translate key="wdMailer_ClinicalParticulars" />*</label>
+        <f:if condition="{wdMailer_ClinicalParticulars_Required}=='isEmpty'">
+            <f:then>
+                <f:form.textarea property="wdMailer_ClinicalParticulars_Required" id="wdMailer_ClinicalParticulars" value=""/>
+                <label class="error">Das Feld "<f:translate key="wdMailer_ClinicalParticulars" />" ist ein Pflichtfeld.</label>
+            </f:then>
+            <f:else>
+                <f:form.textarea property="wdMailer_ClinicalParticulars_Required" id="wdMailer_ClinicalParticulars"/>
+            </f:else>
+        </f:if>
+    </div>
+
+    <div class="wd-forms--fieldset-input">
+        <label for="wdMailer_Question"><f:translate key="wdMailer_Question" />*</label>
+        <f:if condition="{wdMailer_Question_Required}=='isEmpty'">
+            <f:then>
+                <f:form.textarea property="wdMailer_Question_Required" id="wdMailer_Question" value=""/>
+                <label class="error">Das Feld "<f:translate key="wdMailer_Question" />" ist ein Pflichtfeld.</label>
+            </f:then>
+            <f:else>
+                <f:form.textarea property="wdMailer_Question_Required" id="wdMailer_Question"/>
+            </f:else>
+        </f:if>
+    </div>
+
+    </fieldset>
+</div>
+<div class="wd-forms--fieldset-input">
+    <fieldset>
+        <legend><f:translate key="wdMailer_LaboratoryValues" /></legend>
+
+        <div class="wd-forms--fieldset-input">
+            <label for="wdMailer_CtMr"><f:translate key="wdMailer_CtMr" /></label>
+            <f:form.textfield property="wdMailer_CtMr" id="wdMailer_CtMr" placeholder="<f:translate key='wdMailer_Kreatinin' />" />
+        </div>
+
+        <div class="wd-forms--fieldset-input">
+            <label><f:translate key="wdMailer_Intervention" /></label>
+            <f:form.textfield property="wdMailer_InterventionQuick" id="wdMailer_InterventionQuick" placeholder="<f:translate key='wdMailer_Quick' />" /><br>
+        </div>
+
+        <div class="wd-forms--fieldset-input">
+            <f:form.textfield property="wdMailer_InterventionThrombocytes" id="wdMailer_InterventionThrombocytes" placeholder="<f:translate key='wdMailer_Thrombocytes' />"/>
+        </div>
+
+
+        <div class="wd-forms--fieldset-input">
+            <label><f:translate key="wdMailer_Cases" /></label>
+            <f:form.checkbox property="wdMailer_Cases" value="<f:translate key='wdMailer_Cases_one' />" id="wdMailer_Cases_one" multiple="1" /><label for="wdMailer_Cases_one"><f:translate key="wdMailer_Cases_one" /></label>
+            <f:form.checkbox property="wdMailer_Cases" value="<f:translate key='wdMailer_Cases_two' />" id="wdMailer_Cases_two" multiple="1" /><label for="wdMailer_Cases_two"><f:translate key="wdMailer_Cases_two" /></label>
+            <f:form.checkbox property="wdMailer_Cases" value="<f:translate key='wdMailer_Cases_three' />" id="wdMailer_Cases_three" multiple="1" /><label for="wdMailer_Cases_three"><f:translate key="wdMailer_Cases_three" /></label>
+            <f:form.textfield property="wdMailer_CasesInput" id="wdMailer_CasesInput" placeholder="<f:translate key='wdMailer_CasesInput' />" />
+        </div>
+
+        <div class="wd-forms--fieldset-input">
+            <label for="wdMailer_ResultsCopy"><f:translate key="wdMailer_ResultsCopy" /></label>
+            <f:form.textfield property="wdMailer_ResultsCopy" id="wdMailer_ResultsCopy" placeholder="<f:translate key='wdMailer_ResultsCopyInput' />"/>
+        </div>
+
+    </fieldset>
+</div>

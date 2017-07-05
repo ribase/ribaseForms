@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-11-30T09:56:14Z" product-name="ribase_forms">
+		<header/>
+		<body>
+			<trans-unit id="tx_ribaseforms_domain_model_mailer">
+				<source>Mailer</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

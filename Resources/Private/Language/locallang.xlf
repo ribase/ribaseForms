@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-11-30T09:56:14Z" product-name="ribase_forms">
+		<header/>
+		<body>
+			<trans-unit id="tx_ribaseforms_domain_model_mailer">
+				<source>Mailer</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Firstname">
+				<source>Firstname</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Lastname">
+				<source>Lastname</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Street">
+				<source>Street</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Zip">
+				<source>Zip</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_City">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Tel">
+				<source>Telephone</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_TelBusiness">
+				<source>Telephone (Business)</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_TelMob">
+				<source>Mobile</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Insurance">
+				<source>Insurance</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Birthdate">
+				<source>Date of Birth</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Class">
+				<source>Class</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Class_one">
+				<source>1st Class</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Class_two">
+				<source>2nd Class</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Class_no">
+				<source>General</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_DesiredDoctor">
+				<source>Desired Doctor</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_EntryDate">
+				<source>Entry Date</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_ReferringPhysician">
+				<source>Referring Physican</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Diagnose">
+				<source>Diagnose</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Treatment">
+				<source>Treatment</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Medicaments">
+				<source>Medicaments</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_ThankYou">
+				<source>Many thanks for your subscription</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Response">
+				<source>Your Response</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Gender_Woman">
+				<source>Mrs.</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Gender_Man">
+				<source>Mr.</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Gender">
+				<source>Salutation</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Send">
+				<source>Send</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Appointment_one">
+				<source>Urgent (within 48 h)</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Appointment_two">
+				<source>Regular appointment</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Appointment_three">
+				<source>Patient reports himself to</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Appointment_four">
+				<source>Please summon patient</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_AppointmentLegend">
+				<source>Appointment</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Appointment">
+				<source>Emergency radiology contact, Tel. 061 685 82 85</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_AgreedAppointment">
+				<source>Agreed Appointment</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_MedicalExamination">
+				<source>Desired Examination</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_MedicalExamination_one">
+				<source>X-Ray</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_MedicalExamination_two">
+				<source>Mammography</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_MedicalExamination_three">
+				<source>Ultrasonic / Duplex</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_MedicalExamination_four">
+				<source>CT</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_MedicalExamination_five">
+				<source>MR</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_MedicalExamination_six">
+				<source>Intervention</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_BodyRegion">
+				<source>Body Region</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_ClinicalParticulars">
+				<source>Clinical Particulars</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Question">
+				<source>Question</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_LaboratoryValues">
+				<source>Laboratory Values</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_CtMr">
+				<source>CT / MR</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Kreatinin">
+				<source>Kreatinin</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Intervention">
+				<source>Intervention</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Quick">
+				<source>Quick</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Thrombocytes">
+				<source>Thrombocytes</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_InterventionQuick">
+				<source>Quick</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_InterventionThrombocytes">
+				<source>Thrombocytes</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Cases">
+				<source>Case</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Cases_one">
+				<source>Only written findings</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Cases_two">
+				<source>Print (only for X-ray and ultrasonic)</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Cases_three">
+				<source>CD (all arrangements possible)</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_CasesInput">
+				<source>HIN-Address/FAX</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_ResultsCopy">
+				<source>Results copy</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_ResultsCopyInput">
+				<source>Results copy to</source>
+			</trans-unit>
+			<trans-unit id="wdMailer_Birthdate">
+				<source>Birthdate</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
+
+

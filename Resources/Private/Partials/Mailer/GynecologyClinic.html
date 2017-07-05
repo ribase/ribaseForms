@@ -1,0 +1,63 @@
+<div class="wd-forms--fieldset-input">
+    <label for="wdMailer_Insurance"><f:translate key="wdMailer_Insurance" />*</label>
+    <f:if condition="{wdMailer_Insurance_Required}=='isEmpty'">
+        <f:then>
+            <f:form.textfield property="wdMailer_Insurance_Required" id="wdMailer_Insurance"/>
+            <label class="error">Das Feld "<f:translate key="wdMailer_Insurance" />" ist ein Pflichtfeld.</label>
+        </f:then>
+        <f:else>
+            <f:form.textfield property="wdMailer_Insurance_Required" id="wdMailer_Insurance"/>
+        </f:else>
+    </f:if>
+</div>
+
+<div class="wd-forms--fieldset-input">
+    <label for="wdMailer_Birthdate"><f:translate key="wdMailer_Birthdate" />*</label>
+    <f:if condition="{wdMailer_Birthdate_Required}=='isEmpty'">
+        <f:then>
+            <f:form.textfield property="wdMailer_Birthdate_Required" id="wdMailer_Birthdate" value=""/>
+            <label class="error">Das Feld "<f:translate key="wdMailer_Birthdate" />" ist ein Pflichtfeld.</label>
+        </f:then>
+        <f:else>
+            <f:form.textfield property="wdMailer_Birthdate_Required" id="wdMailer_Birthdate" type="date"/>
+        </f:else>
+    </f:if>
+</div>
+
+<div class="wd-forms--fieldset-input">
+    <label><f:translate key="wdMailer_Class" /></label>
+
+    <f:form.radio property="wdMailer_Class" value="1" id="wdMailer_Class_one"/><label for="wdMailer_Class_one"><f:translate key="wdMailer_Class_one" /></label>
+    <f:form.radio property="wdMailer_Class" value="2" id="wdMailer_Class_two"/><label for="wdMailer_Class_two"><f:translate key="wdMailer_Class_two" /></label>
+    <f:form.radio property="wdMailer_Class" value="Allgemein" id="wdMailer_Class_no"/><label for="wdMailer_Class_no"><f:translate key="wdMailer_Class_no" /></label>
+
+</div>
+<div class="wd-forms--fieldset-input">
+    <label for="wdMailer_EntryDate"><f:translate key="wdMailer_EntryDate" />*</label>
+    <f:if condition="{wdMailer_EntryDate_Required}=='isEmpty'">
+        <f:then>
+            <f:form.textfield property="wdMailer_EntryDate_Required" id="wdMailer_EntryDate" value=""/>
+            <label class="error">Das Feld "<f:translate key="wdMailer_EntryDate" />" ist ein Pflichtfeld.</label>
+        </f:then>
+        <f:else>
+            <f:form.textfield property="wdMailer_EntryDate_Required" id="wdMailer_EntryDate" />
+        </f:else>
+    </f:if>
+</div>
+<div class="wd-forms--fieldset-input">
+    <label for="wdMailer_ReferringPhysician"><f:translate key="wdMailer_ReferringPhysician" /></label>
+    <f:form.textfield property="wdMailer_ReferringPhysician" id="wdMailer_ReferringPhysician"/>
+</div>
+<div class="wd-forms--fieldset-input">
+    <label for="wdMailer_Diagnose"><f:translate key="wdMailer_Diagnose" /></label>
+    <f:form.textarea property="wdMailer_Diagnose" id="wdMailer_Diagnose"/>
+</div>
+<div class="wd-forms--fieldset-input">
+    <label for="wdMailer_Treatment"><f:translate key="wdMailer_Treatment" /></label>
+    <f:form.textarea property="wdMailer_Treatment" id="wdMailer_Treatment"/>
+</div>
+<div class="wd-forms--fieldset-input">
+    <label for="wdMailer_Medicaments"><f:translate key="wdMailer_Medicaments" /></label>
+    <f:form.textarea property="wdMailer_Medicaments" id="wdMailer_Medicaments"/>
+</div>
+

@@ -1,0 +1,18 @@
+{namespace v=RibaseForms\RibaseForms\ViewHelpers}
+<f:if condition="{field.name}">
+    <f:then>
+        <v:variable.set name="fieldValueRequired" value="{v:variable.get(name: 'wdMailer_{field.id}_{field.name}_Required')}" />
+        <v:variable.set name="fieldRequired" value="{v:variable.get(name: 'wdMailer_{field.id}_{field.name}')}" />
+    </f:then>
+    <f:else>
+        <v:variable.set name="fieldValueRequired" value="{v:variable.get(name: 'wdMailer_{field.id}_Required')}" />
+        <v:variable.set name="fieldRequired" value="{v:variable.get(name: 'wdMailer_{field.id}')}" />
+    </f:else>
+</f:if>
+<v:condition.string.contains haystack="{key}" needle="fieldset-start">
+    <fieldset>
+        <legend>{field.legend}</legend>
+</v:condition.string.contains>
+<v:condition.string.contains haystack="{key}" needle="fieldset-end">
+    </fieldset>
+</v:condition.string.contains>

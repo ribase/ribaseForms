@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="fr_FR" datatype="plaintext" original="messages"  product-name="ribase_forms">
+		<header/>
+		<body>
+			<trans-unit id="tx_ribaseforms_domain_model_mailer">
+				<source>Mailer</source>
+				<target>Mailer</target>
+			</trans-unit>
+			<trans-unit id="wdMailer_Firstname">
+				<source>Firstname</source>
+				<target>Prènom</target>
+			</trans-unit>
+			<trans-unit id="wdMailer_Lastname">
+				<source>Lastname</source>
+				<target>Nom</target>
+			</trans-unit>
+			<trans-unit id="wdMailer_Street">
+				<source>Street</source>
+				<target>Strasse</target>
+			</trans-unit>
+			<trans-unit id="wdMailer_Zip">
+				<source>Zip</source>
+				<target>PLZ</target>
+			</trans-unit>
+			<trans-unit id="wdMailer_City">
+				<source>City</source>
+				<target>Stadt</target>
+			</trans-unit>
+			<trans-unit id="wdMailer_Tel">
+				<source>Telephone</source>
+				<target>Telefon</target>
+			</trans-unit>
+			<trans-unit id="wdMailer_TelBusiness">
+				<source>Telephone (Business)</source>
+				<target>Telefon geschäftlich</target>
+			</trans-unit>
+			<trans-unit id="wdMailer_TelMob">
+				<source>Mobile</source>
+				<target>Mobil</target>
+			</trans-unit>
+			<trans-unit id="wdMailer_Email">
+				<source>Email</source>
+				<target>E-Mail</target>
+			</trans-unit>
+			<trans-unit id="wdMailer_Insurance">
+				<source>Insurance</source>
+				<target>Versicherung</target>
+			</trans-unit>
+			<trans-unit id="wdMailer_Birthdate">
+				<source>Date of Birth</source>
+				<target>Geburtsdatum</target>
+			</trans-unit>
+			<trans-unit id="wdMailer_Class">
+				<source>Class</source>
+				<target>Klasse</target>
+			</trans-unit>
+			<trans-unit id="wdMailer_Class_one">
+				<source>1st Class</source>
+				<target>1. Klasse</target>
+			</trans-unit>
+			<trans-unit id="wdMailer_Class_two">
+				<source>2nd Class</source>
+				<target>2. Klasse</target>
+			</trans-unit>
+			<trans-unit id="wdMailer_Class_no">
+				<source>General</source>
+				<target>Allgemein</target>
+			</trans-unit>
+			<trans-unit id="wdMailer_DesiredDoctor">
+				<source>Desired Doctor</source>
+				<target>Gewünschter Arzt</target>
+			</trans-unit>
+			<trans-unit id="wdMailer_EntryDate">
+				<source>Entry Date</source>
+				<target>Eintrittsdatum</target>
+			</trans-unit>
+			<trans-unit id="wdMailer_ReferringPhysician">
+				<source>Referring Physican</source>
+				<target>Behandelnder Arzt</target>
+			</trans-unit>
+			<trans-unit id="wdMailer_Diagnose">
+				<source>Diagnose</source>
+				<target>Diagnose</target>
+			</trans-unit>
+			<trans-unit id="wdMailer_Treatment">
+				<source>Treatment</source>
+				<target>Behandlung</target>
+			</trans-unit>
+			<trans-unit id="wdMailer_Medicaments">
+				<source>Medicaments</source>
+				<target>Medikamente</target>
+			</trans-unit>
+			<trans-unit id="wdMailer_ThankYou">
+				<source>Many thanks for your subscription</source>
+				<target>Vielen Dank für Ihre Mail</target>
+			</trans-unit>
+			<trans-unit id="wdMailer_Response">
+				<source>Your Response</source>
+				<target>Votre message</target>
+			</trans-unit>
+			<trans-unit id="wdMailer_Gender_Woman">
+				<source>Mrs.</source>
+				<target>Madame</target>
+			</trans-unit>
+			<trans-unit id="wdMailer_Gender_Man">
+				<source>Mr.</source>
+				<target>Monsieur</target>
+			</trans-unit>
+			<trans-unit id="wdMailer_Gender">
+				<source>Salutation</source>
+				<target>Anrede</target>
+			</trans-unit>
+			<trans-unit id="wdMailer_Send">
+				<source>Send</source>
+				<target>Envoyer</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
+
+

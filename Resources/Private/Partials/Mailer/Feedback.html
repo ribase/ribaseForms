@@ -1,0 +1,66 @@
+<div class="wd-forms--fieldset-input">
+  <label for="wdMailer_Response"><f:translate key="wdMailer_Response" />*</label>
+
+  <f:if condition="{wdMailer_Response_Required}=='isEmpty'">
+    <f:then>
+      <f:form.textarea property="wdMailer_Response_Required" id="wdMailer_Response" value=""/>
+      <label class="error">Das Feld "<f:translate key="wdMailer_Response" />" ist ein Pflichtfeld.</label>
+    </f:then>
+    <f:else>
+      <f:form.textarea property="wdMailer_Response_Required" id="wdMailer_Response" value="{wdMailer_Response_Required}"/>
+    </f:else>
+  </f:if>
+</div>
+
+<div class="wd-forms--fieldset-input">
+
+  <f:form.radio property="wdMailer_Gender" value="1" checked="checked" id="wdMailer_Gender_Man" /><label for="wdMailer_Gender_Man"><f:translate key="wdMailer_Gender_Man" /></label>
+  <f:form.radio property="wdMailer_Gender" value="2" id="wdMailer_Gender_Woman"/><label for="wdMailer_Gender_Woman"><f:translate key="wdMailer_Gender_Woman" /></label>
+
+</div>
+
+
+<div class="wd-forms--fieldset-input">
+  <label for="wdMailer_Firstname"><f:translate key="wdMailer_Firstname" />*</label>
+
+  <f:if condition="{wdMailer_Firstname_Required}=='isEmpty'">
+    <f:then>
+      <f:form.textfield property="wdMailer_Firstname_Required" id="wdMailer_Firstname" value=""/>
+      <label class="error">Das Feld "<f:translate key="wdMailer_Firstname" />" ist ein Pflichtfeld.</label>
+    </f:then>
+    <f:else>
+      <f:form.textfield property="wdMailer_Firstname_Required" id="wdMailer_Firstname" value="{wdMailer_Firstname_Required}"/>
+    </f:else>
+  </f:if>
+
+</div>
+
+<div class="wd-forms--fieldset-input">
+  <label for="wdMailer_Lastname"><f:translate key="wdMailer_Lastname" />*</label>
+  <f:if condition="{wdMailer_Lastname_Required}=='isEmpty'">
+    <f:then>
+      <f:form.textfield property="wdMailer_Lastname_Required" id="wdMailer_Lastname" value=""/>
+      <label class="error">Das Feld "<f:translate key="wdMailer_Lastname" />" ist ein Pflichtfeld.</label>
+    </f:then>
+    <f:else>
+      <f:form.textfield property="wdMailer_Lastname_Required" id="wdMailer_Lastname" value="{wdMailer_Lastname_Required}"/>
+    </f:else>
+  </f:if>
+
+
+</div>
+
+<div class="wd-forms--fieldset-input">
+  <label for="wdMailer_EmailFeedback"><f:translate key="wdMailer_EmailFeedback" />*</label>
+  <f:if condition="{wdMailer_EmailFeedback_Required}=='isEmpty'">
+    <f:then>
+      <f:form.textfield property="wdMailer_EmailFeedback_Required" type="email" id="wdMailer_EmailFeedback" value=""/>
+      <label class="error">Das Feld "<f:translate key="wdMailer_EmailFeedback" />" ist ein Pflichtfeld.</label>
+    </f:then>
+    <f:else>
+      <f:form.textfield property="wdMailer_EmailFeedback_Required" type="email" id="wdMailer_EmailFeedback" value="{wdMailer_EmailFeedback_Required}"/>
+    </f:else>
+  </f:if>
+
+
+</div>
