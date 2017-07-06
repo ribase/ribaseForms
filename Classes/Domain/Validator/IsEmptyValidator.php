@@ -1,5 +1,5 @@
 <?php
-namespace RibaseForms\RibaseForms\Domain\Validator;
+namespace WondrousForms\WondrousForms\Domain\Validator;
 
 use \TYPO3\CMS\Core\Utility\GeneralUtility;
 /***************************************************************

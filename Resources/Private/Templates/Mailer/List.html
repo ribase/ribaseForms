@@ -1,6 +1,5 @@
 
 <f:layout name="Default" />
-{namespace v=RibaseForms\RibaseForms\ViewHelpers}
 
 This Template is responsible for creating a table of domain objects.
 
@@ -15,67 +14,34 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 <f:section name="main">
 
-
   <f:form method="post" controller="Mailer" action="send" name="content" object="{content}">
 
-      <f:for each="{inputs}" as="field" key="key">
+    <f:if condition="{option.default} == '1'">
+      <f:render partial="Mailer/DefaultStuff" arguments="{_all}" />
+    </f:if>
 
-        <v:condition.string.contains haystack="{key}" needle="textfield">
-          <f:if condition="{settings.dev}">
-            <f:render partial="Debug/CommentStart" />
-            <f:render partial="Debug/Fieldinformation" arguments="{_all}" />
-            <f:render partial="Debug/CommentEnd" />
-          </f:if>
-          <f:render partial="Inputs/Textfield" arguments="{_all}" />
-        </v:condition.string.contains>
+    <f:if condition="{option.form} == 'feedback' ">
+      <f:render partial="Mailer/Feedback" arguments="{_all}" />
+    </f:if>
 
-        <v:condition.string.contains haystack="{key}" needle="textarea">
-          <f:if condition="{settings.dev}">
-            <f:render partial="Debug/CommentStart" />
-            <f:render partial="Debug/Fieldinformation" arguments="{_all}" />
-            <f:render partial="Debug/CommentEnd" />
-          </f:if>
-          <f:render partial="Inputs/Textarea" arguments="{_all}" />
-        </v:condition.string.contains>
+    <f:if condition="{option.form} == 'medical'">
+      <f:render partial="Mailer/MedicalClinic" arguments="{_all}" />
+    </f:if>
 
-        <v:condition.string.contains haystack="{key}" needle="checkbox">
-          <f:if condition="{settings.dev}">
-            <f:render partial="Debug/CommentStart" />
-            <f:render partial="Debug/Fieldinformation" arguments="{_all}" />
-            <f:render partial="Debug/CommentEnd" />
-          </f:if>
-          <f:render partial="Inputs/Checkbox" arguments="{_all}" />
-        </v:condition.string.contains>
+    <f:if condition="{option.form} == 'surgery'">
+      <f:render partial="Mailer/SurgeryClinic" arguments="{_all}" />
+    </f:if>
 
-        <v:condition.string.contains haystack="{key}" needle="radio">
-          <f:if condition="{settings.dev}">
-            <f:render partial="Debug/CommentStart" />
-            <f:render partial="Debug/Fieldinformation" arguments="{_all}" />
-            <f:render partial="Debug/CommentEnd" />
-          </f:if>
-          <f:render partial="Inputs/Radiobutton" arguments="{_all}" />
+    <f:if condition="{option.form} == 'gynecology'">
+      <f:render partial="Mailer/GynecologyClinic" arguments="{_all}" />
+    </f:if>
 
-        </v:condition.string.contains>
-
-        <v:condition.string.contains haystack="{key}" needle="fieldset">
-          <f:if condition="{settings.dev}">
-            <f:render partial="Debug/CommentStart" />
-            <f:render partial="Debug/Fieldinformation" arguments="{_all}" />
-            <f:render partial="Debug/CommentEnd" />
-          </f:if>
-          <f:render partial="Inputs/Fieldset" arguments="{_all}" />
-        </v:condition.string.contains>
-
-
-      </f:for>
-
-
+    <f:if condition="{option.form} == 'radiology'">
+      <f:render partial="Mailer/RadiologyClinic" arguments="{_all}" />
+    </f:if>
     <div class="wd-forms--fieldset-input">
-      <f:form.submit name="mySubmit" value="<f:translate key='wdMailer_Send'/>" />
+     <f:form.submit name="mySubmit" value="<f:translate key='wdMailer_Send'/>" />
     </div>
-
-
   </f:form>
 </f:section>
 
-{field.name}

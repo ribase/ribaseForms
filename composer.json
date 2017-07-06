@@ -1,23 +1,19 @@
 {
-    "name": "ribase/ribaseforms",
+    "name": "ribase/wondrousforms",
     "type": "typo3-cms-extension",
     "description": "todo",
     "license": ["GPL-2.0+"],
-    "keywords": ["TYPO3 CMS", "ribaseforms"],
+    "keywords": ["TYPO3 CMS", "wondrousforms"],
     "support": {
-        "issues": "https://github.com/ribase/ribaseforms/"
-    },
-    "require": {
-        "fluidtypo3/vhs": "*",
-        "php": ">=5.5.0"
+        "issues": "https://github.com/ribase/wondrousforms/"
     },
     "autoload": {
         "psr-4": {
-            "RibaseForms\\RibaseForms\\": "Classes"
+            "WondrousForms\\WondrousForms\\": "Classes"
         }
     },
-    "version": "2.0.0",
+    "version": "1.1.12",
     "replace": {
-        "ribase_forms": "self.version"
+        "wondrous_forms": "self.version"
     }
 }

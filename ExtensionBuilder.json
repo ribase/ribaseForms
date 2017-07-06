@@ -55,8 +55,8 @@
             "targetVersion": "7.6.0-7.6.99",
             "version": ""
         },
-        "extensionKey": "ribase_forms",
-        "name": "Ribase Forms",
+        "extensionKey": "wondrous_forms",
+        "name": "Wondrous Forms",
         "originalExtensionKey": "",
         "originalVendorName": "",
         "persons": [
@@ -74,11 +74,11 @@
                     "noncacheableActions": "",
                     "switchableActions": ""
                 },
-                "key": "ribaseformdisplay",
-                "name": "Ribase Form Display"
+                "key": "wondrousformdisplay",
+                "name": "Wondrous Form Display"
             }
         ],
-        "vendorName": "RibaseForms"
+        "vendorName": "WondrousForms"
     },
     "wires": [],
     "log": {

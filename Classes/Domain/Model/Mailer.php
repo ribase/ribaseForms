@@ -1,5 +1,5 @@
 <?php
-namespace RibaseForms\RibaseForms\Domain\Model;
+namespace WondrousForms\WondrousForms\Domain\Model;
 
 
 /***************************************************************

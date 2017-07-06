@@ -1,6 +1,6 @@
 <?php
 
-namespace RibaseForms\RibaseForms\Tests\Unit\Domain\Model;
+namespace WondrousForms\WondrousForms\Tests\Unit\Domain\Model;
 
 /***************************************************************
  *  Copyright notice
@@ -27,7 +27,7 @@ namespace RibaseForms\RibaseForms\Tests\Unit\Domain\Model;
  ***************************************************************/
 
 /**
- * Test case for class \RibaseForms\RibaseForms\Domain\Model\Mailer.
+ * Test case for class \WondrousForms\WondrousForms\Domain\Model\Mailer.
  *
  * @copyright Copyright belongs to the respective authors
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
@@ -37,13 +37,13 @@ namespace RibaseForms\RibaseForms\Tests\Unit\Domain\Model;
 class MailerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 {
 	/**
-	 * @var \RibaseForms\RibaseForms\Domain\Model\Mailer
+	 * @var \WondrousForms\WondrousForms\Domain\Model\Mailer
 	 */
 	protected $subject = NULL;
 
 	public function setUp()
 	{
-		$this->subject = new \RibaseForms\RibaseForms\Domain\Model\Mailer();
+		$this->subject = new \WondrousForms\WondrousForms\Domain\Model\Mailer();
 	}
 
 	public function tearDown()

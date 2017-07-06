@@ -1,7 +1,7 @@
 <?php
 return array(
 	'ctrl' => array(
-		'title'	=> 'LLL:EXT:ribase_forms/Resources/Private/Language/locallang_db.xlf:tx_ribaseforms_domain_model_mailer',
+		'title'	=> 'LLL:EXT:wondrous_forms/Resources/Private/Language/locallang_db.xlf:tx_wondrousforms_domain_model_mailer',
 		'label' => 'uid',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -20,7 +20,7 @@ return array(
 			'endtime' => 'endtime',
 		),
 		'searchFields' => '',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('ribase_forms') . 'Resources/Public/Icons/tx_ribaseforms_domain_model_mailer.gif'
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('wondrous_forms') . 'Resources/Public/Icons/tx_wondrousforms_domain_model_mailer.gif'
 	),
 	'interface' => array(
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, ',
@@ -57,8 +57,8 @@ return array(
 				'items' => array(
 					array('', 0),
 				),
-				'foreign_table' => 'tx_ribaseforms_domain_model_mailer',
-				'foreign_table_where' => 'AND tx_ribaseforms_domain_model_mailer.pid=###CURRENT_PID### AND tx_ribaseforms_domain_model_mailer.sys_language_uid IN (-1,0)',
+				'foreign_table' => 'tx_wondrousforms_domain_model_mailer',
+				'foreign_table_where' => 'AND tx_wondrousforms_domain_model_mailer.pid=###CURRENT_PID### AND tx_wondrousforms_domain_model_mailer.sys_language_uid IN (-1,0)',
 			),
 		),
 		'l10n_diffsource' => array(

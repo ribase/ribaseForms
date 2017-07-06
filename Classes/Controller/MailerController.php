@@ -1,14 +1,14 @@
 <?php
-namespace RibaseForms\RibaseForms\Controller;
+namespace WondrousForms\WondrousForms\Controller;
 
 
-use \RibaseForms\RibaseForms\Domain\Validator;
+use \WondrousForms\WondrousForms\Domain\Validator;
 use \TYPO3\CMS\Core\Utility\GeneralUtility;
   /***************************************************************
    *
    *  Copyright notice
    *
-   *  (c) 2015 Sebastian Thadewald <sebastian@wondrous.ch>, Ribase LLC
+   *  (c) 2015 Sebastian Thadewald <sebastian@wondrous.ch>, Wondrous LLC
    *
    *  All rights reserved
    *
@@ -44,37 +44,25 @@ class MailerController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
   {
 
     $arguments = $this->request->getArguments();
+
     $settings = $this->settings;
+
     if($arguments['validated'] == true)
     {
       if(isset($arguments['formValues'])){
         foreach ($arguments['formValues'] as $key => $value) {
+
           $this->view->assign($key, $value);
 
-»
         }
       }
       if(isset($arguments['validatedForms'])){
         foreach ($arguments['validatedForms'] as $key => $value) {
           $this->view->assign($key, $value);
-          
         }
       }
     }
-
-    $inputfields = $settings['inputtext'];
-
-    $cleanedArray = array();
-
-    foreach ($inputfields as $key => $value) {
-      foreach ($value as $key1 => $value1) {
-        $cleanedArray[$key.'_'.$key1] = $value1;
-      }
-    }
-
-
-    $this->view->assign('inputs', $cleanedArray);
-    $this->view->assign('settings', $settings);
+    $this->view->assign('option', $settings);
 
   }
 
@@ -82,78 +70,36 @@ class MailerController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
   {
 
     $formContent = $this->request->getArguments();
-    $formValues = array_intersect_key($formContent['content'], array_flip(preg_grep('/_Required/', array_keys($formContent['content']))));
+    $formValues = array_intersect_key($formContent['content'], array_flip(preg_grep('/^(wdMailer_)(.*_*)(?<!_Required)$/', array_keys($formContent['content']))));
 
     $receiver = $this->settings['receiver'];
     $subject = $this->settings['subject'];
-    $mailRaw = $this->settings;
+
 
     $validatedForm = $this->validateForms($formContent['content']);
 
     if($validatedForm['reload'] == true ){
+
       $listParams['validated']  = true;
       $listParams['formValues'] = $formValues;
       $listParams['validatedForms'] = $validatedForm;
-
-
       $this->redirect('list', NULL, NULL, $listParams);
       return;
     }
 
-    if(!$validatedForm['wdMailer_Email_Required']){
-      $recipient = $validatedForm['wdMailer_EmailFeedback_Required'];
+    $ergebnis = array_merge($formValues, $validatedForm);
+
+    if(!$ergebnis['wdMailer_Email_Required']){
+      $recipient = $ergebnis['wdMailer_EmailFeedback_Required'];
     }else{
-      $recipient = $validatedForm['wdMailer_Email_Required'];
+      $recipient = $ergebnis['wdMailer_Email_Required'];
     }
 
-    $validatedForm = array_merge($formContent, $validatedForm);
+    $this->sendMail($recipient,$receiver,$ergebnis, $subject);
 
-    $mailTextReplaced = $this->replacePlaceholders($mailRaw, $validatedForm);
-
-    \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($validatedForm);
-
-    die;
-
-    $this->sendMail($recipient,$receiver,$validatedForm, $subject, $mailTextReplaced);
   }
 
-  /**
-   * @param $mailRaw
-   * @param $validatedForm
-   * @return mixed
-   */
-  public function replacePlaceholders($mailRaw, $validatedForm)
-  {
-
-    preg_match_all("/\[([^\]]*)\]/", $mailRaw["usermail"], $matches);
-
-    $UserMail = $mailRaw["usermail"];
-
-
-
-    foreach ($validatedForm as $key => $value)
-    {
-      foreach ($matches[1] as &$toReplace)
-      {
-        if(preg_match("/_".$toReplace."_/", $key))
-        {
-          $UserMail = str_replace("[".$toReplace."]",$value, $UserMail);
-        }
-      }
-
-    }
-
-    return $UserMail;
-  }
-
-  /**
-   * @param $recipient
-   * @param $recipientAdmin
-   * @param $formValues
-   * @param $subject
-   * @param $mailTextReplaced
-   */
-  public function sendMail($recipient, $recipientAdmin, $formValues, $subject, $mailTextReplaced)
+  public function sendMail($recipient, $recipientAdmin, $formValues, $subject)
   {
     $templateAdmin = 'Mailer/AdminMail.html';
     $template = 'Mailer/UserMail.html';
@@ -181,14 +127,9 @@ class MailerController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 
   }
 
-  /**
-   * @param $variables
-   * @param $template
-   * @return mixed
-   */
   public function getRenderedEmailTemplate($variables, $template) {
-    $tenplateLayoutRootPath = \TYPO3\CMS\Core\Utility\GeneralUtility::getFileAbsFileName('EXT:ribase_forms/Resources/Private/Layouts/');
-    $templateRootPath = \TYPO3\CMS\Core\Utility\GeneralUtility::getFileAbsFileName('EXT:ribase_forms/Resources/Private/Templates/');
+    $tenplateLayoutRootPath = \TYPO3\CMS\Core\Utility\GeneralUtility::getFileAbsFileName('EXT:wondrous_forms/Resources/Private/Layouts/');
+    $templateRootPath = \TYPO3\CMS\Core\Utility\GeneralUtility::getFileAbsFileName('EXT:wondrous_forms/Resources/Private/Templates/');
     $templatePathAndFilename = $templateRootPath . $template;
 
 
@@ -220,14 +161,8 @@ class MailerController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     return $emailTemplate;
   }
 
-  /**
-   * @param $formValues
-   * @return array
-   */
   public function validateForms($formValues)
   {
-
-
 
     $fieldsToValidate = array_intersect_key($formValues, array_flip(preg_grep('/_(?!.*_)(Required)$/', array_keys($formValues))));
 
@@ -240,6 +175,7 @@ class MailerController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     }else {
       $validatedFields['reload'] = false;
     }
+
 
     return $validatedFields;
 

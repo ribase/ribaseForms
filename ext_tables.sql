@@ -1,7 +1,7 @@
 #
-# Table structure for table 'tx_ribaseforms_domain_model_mailer'
+# Table structure for table 'tx_wondrousforms_domain_model_mailer'
 #
-CREATE TABLE tx_ribaseforms_domain_model_mailer (
+CREATE TABLE tx_wondrousforms_domain_model_mailer (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,

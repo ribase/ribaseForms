@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de_DE" datatype="plaintext" original="messages"  product-name="ribase_forms">
+	<file source-language="en" target-language="de_DE" datatype="plaintext" original="messages"  product-name="wondrous_forms">
 		<header/>
 		<body>
-			<trans-unit id="tx_ribaseforms_domain_model_mailer">
+			<trans-unit id="tx_wondrousforms_domain_model_mailer">
 				<source>Mailer</source>
 				<target>Mailer</target>
 			</trans-unit>
@@ -40,6 +40,10 @@
 				<target>Mobil</target>
 			</trans-unit>
 			<trans-unit id="wdMailer_Email">
+				<source>Email</source>
+				<target>Email Zuweisende Ärztin / Zuweisender Arzt</target>
+			</trans-unit>
+			<trans-unit id="wdMailer_EmailFeedback">
 				<source>Email</source>
 				<target>Email</target>
 			</trans-unit>
@@ -185,7 +189,7 @@
 			</trans-unit>
 			<trans-unit id="wdMailer_LaboratoryValues">
 				<source>Laboratory Values</source>
-				<target>Laborwerte (möglichst nicht älter als 2 Wochen)</target>
+				<target>Laborwerte (möglichst nicht älter als 1 Woche)</target>
 			</trans-unit>
 			<trans-unit id="wdMailer_CtMr">
 				<source>CT / MR</source>

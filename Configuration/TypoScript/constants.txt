@@ -1,15 +1,15 @@
 
-plugin.tx_ribaseforms_ribaseformdisplay {
+plugin.tx_wondrousforms_wondrousformdisplay {
 	view {
-		# cat=plugin.tx_ribaseforms_ribaseformdisplay/file; type=string; label=Path to template root (FE)
-		templateRootPath = EXT:ribase_forms/Resources/Private/Templates/
-		# cat=plugin.tx_ribaseforms_ribaseformdisplay/file; type=string; label=Path to template partials (FE)
-		partialRootPath = EXT:ribase_forms/Resources/Private/Partials/
-		# cat=plugin.tx_ribaseforms_ribaseformdisplay/file; type=string; label=Path to template layouts (FE)
-		layoutRootPath = EXT:ribase_forms/Resources/Private/Layouts/
+		# cat=plugin.tx_wondrousforms_wondrousformdisplay/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:wondrous_forms/Resources/Private/Templates/
+		# cat=plugin.tx_wondrousforms_wondrousformdisplay/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:wondrous_forms/Resources/Private/Partials/
+		# cat=plugin.tx_wondrousforms_wondrousformdisplay/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:wondrous_forms/Resources/Private/Layouts/
 	}
 	persistence {
-		# cat=plugin.tx_ribaseforms_ribaseformdisplay//a; type=string; label=Default storage PID
+		# cat=plugin.tx_wondrousforms_wondrousformdisplay//a; type=string; label=Default storage PID
 		storagePid =
 	}
 }

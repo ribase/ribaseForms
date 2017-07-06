@@ -38,7 +38,7 @@
 
 <f:if condition="{option.birthdate} == '1'">
   <div class="wd-forms--fieldset-input">
-    <label for="wdMailer_Birthdate"><f:translate key="wdMailer_Birthdate" /></label>
+    <label for="wdMailer_Birthdate"><f:translate key="wdMailer_Birthdate" />*</label>
     <f:if condition="{wdMailer_Birthdate_Required}=='isEmpty'">
       <f:then>
         <f:form.textfield property="wdMailer_Birthdate_Required" id="wdMailer_Birthdate" value=""/>

@@ -1,5 +1,5 @@
 <?php
-namespace RibaseForms\RibaseForms\Tests\Unit\Controller;
+namespace WondrousForms\WondrousForms\Tests\Unit\Controller;
 /***************************************************************
  *  Copyright notice
  *
@@ -25,7 +25,7 @@ namespace RibaseForms\RibaseForms\Tests\Unit\Controller;
  ***************************************************************/
 
 /**
- * Test case for class RibaseForms\RibaseForms\Controller\MailerController.
+ * Test case for class WondrousForms\WondrousForms\Controller\MailerController.
  *
  * @author Sebastian Thadewald <sebastian@wondrous.ch>
  */
@@ -33,13 +33,13 @@ class MailerControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 {
 
 	/**
-	 * @var \RibaseForms\RibaseForms\Controller\MailerController
+	 * @var \WondrousForms\WondrousForms\Controller\MailerController
 	 */
 	protected $subject = NULL;
 
 	public function setUp()
 	{
-		$this->subject = $this->getMock('RibaseForms\\RibaseForms\\Controller\\MailerController', array('redirect', 'forward', 'addFlashMessage'), array(), '', FALSE);
+		$this->subject = $this->getMock('WondrousForms\\WondrousForms\\Controller\\MailerController', array('redirect', 'forward', 'addFlashMessage'), array(), '', FALSE);
 	}
 
 	public function tearDown()
@@ -55,7 +55,7 @@ class MailerControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 
 		$allMailers = $this->getMock('TYPO3\\CMS\\Extbase\\Persistence\\ObjectStorage', array(), array(), '', FALSE);
 
-		$mailerRepository = $this->getMock('RibaseForms\\RibaseForms\\Domain\\Repository\\MailerRepository', array('findAll'), array(), '', FALSE);
+		$mailerRepository = $this->getMock('WondrousForms\\WondrousForms\\Domain\\Repository\\MailerRepository', array('findAll'), array(), '', FALSE);
 		$mailerRepository->expects($this->once())->method('findAll')->will($this->returnValue($allMailers));
 		$this->inject($this->subject, 'mailerRepository', $mailerRepository);
 
@@ -71,7 +71,7 @@ class MailerControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 	 */
 	public function showActionAssignsTheGivenMailerToView()
 	{
-		$mailer = new \RibaseForms\RibaseForms\Domain\Model\Mailer();
+		$mailer = new \WondrousForms\WondrousForms\Domain\Model\Mailer();
 
 		$view = $this->getMock('TYPO3\\CMS\\Extbase\\Mvc\\View\\ViewInterface');
 		$this->inject($this->subject, 'view', $view);

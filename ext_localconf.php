@@ -4,8 +4,8 @@ if (!defined('TYPO3_MODE')) {
 }
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-	'RibaseForms.' . $_EXTKEY,
-	'Ribaseformdisplay',
+	'WondrousForms.' . $_EXTKEY,
+	'Wondrousformdisplay',
 	array(
 		'Mailer' => 'list, show, send'
 

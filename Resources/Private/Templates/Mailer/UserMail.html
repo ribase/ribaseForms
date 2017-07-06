@@ -12,6 +12,20 @@
               </tr>
               <tr>
                 <td style="padding:20px 0 30px 0;color:#153643;font-family:Arial,sans-serif;font-size:16px;line-height:20px">
+                  <p>Guten Tag
+                    <f:if condition="{mailContent.wdMailer_Gender}=='1'">
+                      <f:then>
+                        <f:translate key="wdMailer_Gender_Man" />
+                      </f:then>
+                      <f:else>
+                        <f:translate key="wdMailer_Gender_Woman" />
+                      </f:else>
+                    </f:if>
+                    {mailContent.wdMailer_Firstname} {mailContent.wdMailer_Lastname}</p>
+                  <p>Vielen Dank!</p>
+                  <p></p>
+                  <p>Freundliche Grüsse</p>
+                  <p>St. <span class="il">Claraspital</span> AG</p>
                 </td>
               </tr>
 
